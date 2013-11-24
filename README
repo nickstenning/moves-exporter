@@ -1,0 +1,19 @@
+moves-exporter
+==============
+
+A couple of hacky scripts to export data from the Moves API[1].
+
+[1]: https://dev.moves-app.com/docs/api
+
+usage
+-----
+
+   ./getcode                         # Returns "code" in redirect URL
+   ./gettoken <code>                 # Returns "access_token" in payload
+   export USER_ACCESS_TOKEN=<access_token>
+   ./getprofile                      # Returns (amongst other stuff) "firstDate"
+   ./getalldata <firstDate>
+
+`getalldata` will only download data up to yesterday, and will not download
+files that already exist in the `data/` directory. In order to redownload the
+data for a day, simply delete the data file in `data/`.

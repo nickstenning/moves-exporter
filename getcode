@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -eu
+
+TOKEN_URL="https://api.moves-app.com/oauth/v1/authorize?response_type=code&client_id=${CLIENT_ID}&scope=${SCOPE}&redirect_uri=${REDIRECT_URI}"
+
+echo "$TOKEN_URL"

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -eu
+
+PROFILE_URL="https://api.moves-app.com/api/v1/user/profile"
+
+curl -sSL -H "Authorization: Bearer $USER_ACCESS_TOKEN" "$PROFILE_URL"
